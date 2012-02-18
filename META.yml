@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               LWP-Protocol-https
-version:            6.02
+version:            6.03
 abstract:           Provide https support for LWP::UserAgent
 author:
     - Gisle Aas <gisle@activestate.com>
@@ -11,14 +11,14 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    IO::Socket::SSL:  1.38
-    LWP::UserAgent:   6.02
+    IO::Socket::SSL:  1.54
+    LWP::UserAgent:   6.04
     Mozilla::CA:      20110101
     Net::HTTPS:       6
-    perl:             5.008008
+    perl:             5.008001
 resources:
     MailingList:  mailto:libwww@perl.org
-    repository:   http://github.com/gisle/libwww-perl/tree/LWP-Protocol-https/master
+    repository:   http://github.com/gisle/lwp-protocol-https
 no_index:
     directory:
         - t

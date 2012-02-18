@@ -1,6 +1,6 @@
 #!perl -w
 
-require 5.008008;
+require 5.008001;
 use strict;
 use ExtUtils::MakeMaker;
 use Getopt::Long qw(GetOptions);
@@ -11,16 +11,16 @@ WriteMakefile(
     ABSTRACT_FROM => 'lib/LWP/Protocol/https.pm',
     AUTHOR => 'Gisle Aas <gisle@activestate.com>',
     LICENSE => "perl",
-    MIN_PERL_VERSION => 5.008008,
+    MIN_PERL_VERSION => 5.008001,
     PREREQ_PM => {
-	'LWP::UserAgent' => '6.02',
+	'LWP::UserAgent' => '6.04',
 	'Net::HTTPS' => 6,
-	'IO::Socket::SSL' => "1.38",
+	'IO::Socket::SSL' => "1.54",
 	'Mozilla::CA' => "20110101",
     },
     META_MERGE => {
 	resources => {
-            repository => 'http://github.com/gisle/libwww-perl/tree/LWP-Protocol-https/master',
+            repository => 'http://github.com/gisle/lwp-protocol-https',
 	    MailingList => 'mailto:libwww@perl.org',
         }
     },

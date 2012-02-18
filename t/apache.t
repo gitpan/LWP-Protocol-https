@@ -1,15 +1,17 @@
 #!perl -w
 
 use strict;
-use Test;
+use Test::More;
 
 use LWP::UserAgent;
 
 my $ua = LWP::UserAgent->new();
-my $res = $ua->simple_request(HTTP::Request->new(GET => "https://www.apache.org"));
+plan skip_all => "Not online" unless $ua->is_online;
 
 plan tests => 2;
+my $res = $ua->simple_request(HTTP::Request->new(GET => "https://www.apache.org"));
+
 ok($res->is_success);
-ok($res->content =~ /Apache Software Foundation/);
+like($res->content, qr/Apache Software Foundation/);
 
 $res->dump(prefix => "# ");

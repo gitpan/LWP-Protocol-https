@@ -1,7 +1,7 @@
 package LWP::Protocol::https;
 
 use strict;
-our $VERSION = "6.02";
+our $VERSION = "6.03";
 
 require LWP::Protocol::http;
 our @ISA = qw(LWP::Protocol::http);
@@ -27,7 +27,7 @@ sub _extra_sock_opts
 	    if ($@) {
 		if ($@ =! /^Can't locate Mozilla\/CA\.pm/) {
 		    $@ = <<'EOT';
-Can't verify SSL peers without knowning which Certificate Authorities to trust
+Can't verify SSL peers without knowing which Certificate Authorities to trust
 
 This problem can be fixed by either setting the PERL_LWP_SSL_CA_FILE
 envirionment variable or by installing the Mozilla::CA module.
@@ -103,7 +103,7 @@ LWP::Protocol::https - Provide https support for LWP::UserAgent
 
 =head1 DESCRIPTION
 
-The LWP::Protocol::https module provide support for using https schemed
+The LWP::Protocol::https module provides support for using https schemed
 URLs with LWP.  This module is a plug-in to the LWP protocol handling, so
 you don't use it directly.  Once the module is installed LWP is able
 to access sites using HTTP over SSL/TLS.
