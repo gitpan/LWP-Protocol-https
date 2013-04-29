@@ -1,29 +1,29 @@
---- #YAML:1.0
-name:               LWP-Protocol-https
-version:            6.03
-abstract:           Provide https support for LWP::UserAgent
+---
+abstract: 'Provide https support for LWP::UserAgent'
 author:
-    - Gisle Aas <gisle@activestate.com>
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'Gisle Aas <gisle@activestate.com>'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    IO::Socket::SSL:  1.54
-    LWP::UserAgent:   6.04
-    Mozilla::CA:      20110101
-    Net::HTTPS:       6
-    perl:             5.008001
-resources:
-    MailingList:  mailto:libwww@perl.org
-    repository:   http://github.com/gisle/lwp-protocol-https
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.57_05
+  ExtUtils::MakeMaker: 0
+configure_requires:
+  ExtUtils::MakeMaker: 0
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.6501, CPAN::Meta::Converter version 2.120921'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: LWP-Protocol-https
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  IO::Socket::SSL: 1.54
+  LWP::UserAgent: 6.04
+  Mozilla::CA: 20110101
+  Net::HTTPS: 6
+  perl: 5.008001
+resources:
+  repository: http://github.com/libwww-perl/lwp-protocol-https
+  x_MailingList: mailto:libwww@perl.org
+version: 6.04

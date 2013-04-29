@@ -1,7 +1,7 @@
 package LWP::Protocol::https;
 
 use strict;
-our $VERSION = "6.03";
+our $VERSION = "6.04";
 
 require LWP::Protocol::http;
 our @ISA = qw(LWP::Protocol::http);
@@ -18,6 +18,9 @@ sub _extra_sock_opts
     if (delete $ssl_opts{verify_hostname}) {
 	$ssl_opts{SSL_verify_mode} ||= 1;
 	$ssl_opts{SSL_verifycn_scheme} = 'www';
+    }
+    else {
+	$ssl_opts{SSL_verify_mode} = 0;
     }
     if ($ssl_opts{SSL_verify_mode}) {
 	unless (exists $ssl_opts{SSL_ca_file} || exists $ssl_opts{SSL_ca_path}) {
